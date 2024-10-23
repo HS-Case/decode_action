@@ -1,4 +1,4 @@
-//Wed Oct 23 2024 10:08:21 GMT+0000 (Coordinated Universal Time)
+//Wed Oct 23 2024 11:08:45 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const $ = new Env("芒果𝐓𝐕", {
@@ -11,23 +11,19 @@ const $ = new Env("芒果𝐓𝐕", {
   _0x32gm21 = async () => {
     return new Promise((_0x1b6a56, _0x57c1e1) => {
       $.post({
-  "url": $.Server + "/sfw",
-  "headers": {
-    "Content-Type": "application/json",
-    "x-auth-uid": yqcKey,
-    "x-id": $.scriptname
-  },
-  "body": JSON.stringify({
-    "yqc": $request
-  })
-}, (_0x8ba63a, _0x5eb61f, _0x427657) => {
-  if (_0x8ba63a) {
-    $.log("请求失败: " + _0x8ba63a);
-    return _0x57c1e1(_0x8ba63a);
-  }
-  $.log("接收到的响应内容: " + _0x427657);
-  _0x1b6a56(_0x427657);
-});
+        "url": $.Server + "/sfw",
+        "headers": {
+          "Content-Type": "application/json",
+          "x-auth-uid": yqcKey,
+          "x-id": $.scriptname
+        },
+        "body": JSON.stringify({
+          "yqc": $request
+        })
+      }, (_0x8ba63a, _0x5eb61f, _0x427657) => {
+        if (_0x8ba63a) return _0x57c1e1(_0x8ba63a);
+        _0x1b6a56(_0x427657);
+      });
     });
   };
 if (!yqcKey) $.msg("请填写会员卡密"), $.done({});
